@@ -452,6 +452,12 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 flatpak install flathub com.usebottles.bottles
 ```
 
+##### LINE
 
+使用Bottles安裝LINE後，需要的相依套件
+
+```bash
+cjkfonts、vcredist2012、d3dcompiler_46、iertutil
+```
 
 
