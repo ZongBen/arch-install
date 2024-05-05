@@ -419,7 +419,7 @@ sudo pacman -S gcc make git ripgrep fd unzip neovim
 git clone https://github.com/ZongBen/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
-#### 3.6.2 遊戲相關軟體
+#### 3.6.2 日常應用
 
 ##### Steam
 
