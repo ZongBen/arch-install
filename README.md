@@ -419,6 +419,27 @@ sudo pacman -S gcc make git ripgrep fd unzip neovim
 git clone https://github.com/ZongBen/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
+##### Node.js
+
+```bash
+yay -S nvm
+```
+
+##### Docker
+
+```bash
+sudo pacman -S docker docker-compose
+sudo systemctl enable docker # 開機啟動
+sudo systemctl start docker # 啟動服務
+sudo usermod -aG docker username # 將使用者加入docker群組
+```
+
+##### Dotnet
+
+```bash
+sudo pacman -S dotnet-sdk dotnet-runtime aspnet-runtime
+```
+
 #### 3.6.2 日常應用
 
 ##### Steam
