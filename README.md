@@ -361,6 +361,7 @@ sudo systemctl start ufw
 ```bash
 sudo ufw default allow outgoing
 sudo ufw default deny incoming
+sudo ufw allow 1714:1764 # KDE CONNECT(可選)
 sudo ufw allow ssh # 遠端連線(可選)
 sudo ufw reload
 ```
