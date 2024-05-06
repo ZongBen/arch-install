@@ -415,7 +415,7 @@ size = 14
 ##### Neovim
 
 ```bash
-sudo pacman -S gcc make git ripgrep fd unzip neovim
+sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit
 git clone https://github.com/ZongBen/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
