@@ -411,6 +411,22 @@ style = "Italic"
 
 [font]
 size = 14
+
+[env]
+TERM = "xterm-256color"
+```
+
+##### Tmux
+
+```bash
+sudo pacman -S tmux
+```
+
+設定tmux顏色
+
+```bash
+echo "set -g default-terminal \"screen-256color\"" >> ~/.config/tmux/tmux.conf
+echo "set -ag terminal-overrides \",xterm-256color:RGB\"" >> ~/.config/tmux/tmux.conf
 ```
 
 ##### Neovim
