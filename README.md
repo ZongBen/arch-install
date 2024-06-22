@@ -385,6 +385,7 @@ yay -S mkinitcpio-firmware
 
 ```bash
 sudo os-prober
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ### 3.7 常用軟體安裝
