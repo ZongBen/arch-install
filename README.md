@@ -384,6 +384,7 @@ yay -S mkinitcpio-firmware
 ### 3.6 雙系統
 
 ```bash
+vim /etc/default/grub #取消GRUB_DISABLE_OS_PROBER=false的註解
 sudo os-prober
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
