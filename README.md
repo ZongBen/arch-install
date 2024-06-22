@@ -294,6 +294,7 @@ ls /boot
 5. 安裝完畢，離開chroot環境，取消掛載，重新開機
 
 ```bash
+exit
 umount /mnt/boot
 umount /mnt
 shutdown now
