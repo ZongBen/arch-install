@@ -381,6 +381,7 @@ sudo pacman -S linux linux-firmware
 ```bash
 yay -S mkinitcpio-firmware
 ```
+
 ### 3.6 雙系統
 
 ```bash
@@ -441,7 +442,7 @@ echo "set -ag terminal-overrides \",xterm-256color:RGB\"" >> ~/.config/tmux/tmux
 ##### Neovim
 
 ```bash
-sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit
+sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit xclip
 git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
@@ -469,6 +470,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime aspnet-runtime
 #### 3.7.2 日常應用
 
 ##### sddm numlock
+
 ```bash
 vim /etc/sddm.conf
 #在[General]底下加入
