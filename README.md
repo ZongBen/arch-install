@@ -195,9 +195,8 @@ pacman -S linux-firmware
 pacman -S sudo networkmanager vim firefox noto-fonts-cjk noto-fonts-emoji
 pacman -S xorg xorg-server pipewire wireplumber pipewire-pulse intel-ucode nvtop
 pacman -S sddm plasma-meta packagekit-qt6
-pacman -S kde-applications
 pacman -S fcitx5-im fcitx5-chewing fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
-pacman -S git openssh fakeroot base-devel
+pacman -S git openssh fakeroot base-devel os-prober
 ```
 
 ### 2.7 設定系統
@@ -382,10 +381,15 @@ sudo pacman -S linux linux-firmware
 ```bash
 yay -S mkinitcpio-firmware
 ```
+### 3.6 雙系統
 
-### 3.6 常用軟體安裝
+```bash
+sudo os-prober
+```
 
-#### 3.6.1 程式開發
+### 3.7 常用軟體安裝
+
+#### 3.7.1 程式開發
 
 ##### Alacritty
 
@@ -460,7 +464,14 @@ sudo usermod -aG docker username # 將使用者加入docker群組
 sudo pacman -S dotnet-sdk dotnet-runtime aspnet-runtime
 ```
 
-#### 3.6.2 日常應用
+#### 3.7.2 日常應用
+
+##### sddm numlock
+```bash
+vim /etc/sddm.conf
+#在[GENERAL]底下加入
+Numlock=on
+```
 
 ##### Steam
 
