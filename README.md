@@ -1,6 +1,7 @@
 # ArchLinux + KDE 桌面環境安裝筆記
 
 ## 1. 製作開機隨身碟
+
 1. 至[Arch官網](https://archlinux.org/download/)下載臺灣 ArchLinux ISO 檔案
 2. 使用[Etcher](https://www.balena.io/etcher/)將ISO檔案寫入隨身碟
 
@@ -8,14 +9,15 @@
 
 ### 2.1 開機隨身碟安裝
 
-1. 隨身碟插著電腦，開機按Delete進入BIOS，關閉Secure Boot。 
+1. 隨身碟插著電腦，開機按Delete進入BIOS，關閉Secure Boot。
 2. 調整BIOS開機順序，以UEFI模式隨身碟開機，進入Arch Linux，用鍵盤選第一個選項，按Enter進入安裝媒體。
 3. 載入Arch Linux系統後會進入終端機(顯示root@archiso)，系統應該會自動連上網路。  
-ping看看Arch Linux檢查網路是否正常:
+   ping看看Arch Linux檢查網路是否正常:
 
 ```bash
 ping -c 3 archlinux.org
 ```
+
 4. 檢查是否為UEFI模式開機，應會回傳「64」。若顯示No such file or directory的話，輸入poweroff關機，退回BIOS啟用UEFI再重新來過。
 
 ```bash
@@ -192,7 +194,8 @@ pacman -S linux-firmware
 ```bash
 pacman -S sudo networkmanager vim firefox noto-fonts-cjk noto-fonts-emoji
 pacman -S xorg xorg-server pipewire wireplumber pipewire-pulse intel-ucode nvtop
-pacman -S sddm plasma-meta kde-applications packagekit-qt6
+pacman -S sddm plasma-meta packagekit-qt6
+pacman -S kde-applications
 pacman -S fcitx5-im fcitx5-chewing fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
 pacman -S git openssh fakeroot base-devel
 ```
@@ -433,7 +436,7 @@ echo "set -ag terminal-overrides \",xterm-256color:RGB\"" >> ~/.config/tmux/tmux
 
 ```bash
 sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit
-git clone https://github.com/ZongBen/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 ##### Node.js
@@ -468,11 +471,13 @@ sudo vim /etc/pacman.conf
 ```
 
 下載Steam
+
 ```bash
 sudo pacman -S steam
 ```
 
 若Steam下載速度緩慢
+
 ```bash
 sudo vim /home/username/.steam/steam/steam_dev.cfg
 
@@ -503,5 +508,3 @@ cjkfonts、vcredist2012、d3dcompiler_46、iertutil
 ```bash
 sudo pacman -S openvpn networkmanager-openvpn
 ```
-
-
