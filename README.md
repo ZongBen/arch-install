@@ -258,7 +258,7 @@ passwd username
 # 輸入密碼兩次
 ```
 
-9. (可選) 編輯sudoers檔案，使username(使用者名稱)可以使用sudo權限
+9. (可選) vim /etc/sudoers 編輯sudoers檔案，使username(使用者名稱)可以使用sudo權限
 
 ```bash
 username ALL=(ALL) ALL
@@ -294,8 +294,8 @@ ls /boot
 5. 安裝完畢，離開chroot環境，取消掛載，重新開機
 
 ```bash
-unmount /mnt/boot
-unmount /mnt
+umount /mnt/boot
+umount /mnt
 shutdown now
 ```
 
@@ -469,7 +469,7 @@ sudo pacman -S dotnet-sdk dotnet-runtime aspnet-runtime
 ##### sddm numlock
 ```bash
 vim /etc/sddm.conf
-#在[GENERAL]底下加入
+#在[General]底下加入
 Numlock=on
 ```
 
