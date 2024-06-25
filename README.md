@@ -194,9 +194,9 @@ pacman -S linux-firmware
 ```bash
 pacman -S sudo networkmanager vim firefox noto-fonts-cjk noto-fonts-emoji
 pacman -S xorg xorg-server pipewire wireplumber pipewire-pulse intel-ucode nvtop
-pacman -S sddm plasma-meta packagekit-qt6 ffmpegthumbs feh
+pacman -S sddm plasma-meta packagekit-qt6 ffmpegthumbs feh mpv
 pacman -S fcitx5-im fcitx5-chewing fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
-pacman -S git openssh fakeroot base-devel os-prober
+pacman -S git openssh fakeroot base-devel
 ```
 
 ### 2.7 設定系統
@@ -386,6 +386,7 @@ yay -S mkinitcpio-firmware
 ### 3.6 雙系統
 
 ```bash
+sudo pacman -S os-prober
 vim /etc/default/grub #取消GRUB_DISABLE_OS_PROBER=false的註解
 sudo os-prober
 sudo grub-mkconfig -o /boot/grub/grub.cfg
