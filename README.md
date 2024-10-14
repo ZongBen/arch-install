@@ -196,7 +196,7 @@ pacman -S sudo networkmanager vim firefox noto-fonts-cjk noto-fonts-emoji
 pacman -S xorg xorg-server pipewire wireplumber pipewire-pulse intel-ucode nvtop
 pacman -S sddm plasma-meta packagekit-qt6 ffmpegthumbs feh mpv alacritty
 pacman -S fcitx5-im fcitx5-chewing fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
-pacman -S git openssh fakeroot base-devel
+pacman -S git openssh fakeroot base-devel ntfs-3g
 ```
 
 ### 2.7 設定系統
