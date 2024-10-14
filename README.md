@@ -448,10 +448,10 @@ sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit xclip
 git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
-##### Node.js
+##### AUR others
 
 ```bash
-yay -S nvm
+yay -S nvm twitch-dl yt-dlp
 ```
 
 ##### Docker
