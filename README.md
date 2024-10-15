@@ -528,3 +528,19 @@ cjkfonts、vcredist2012、d3dcompiler_46、iertutil
 ```bash
 sudo pacman -S openvpn networkmanager-openvpn ark unrar p7zip
 ```
+
+##### WallPapper on KDE
+1.安裝
+```bash
+sudo pacman -S extra-cmake-modules plasma-framework5 gst-libav base-devel mpv python-websockets qt5-declarative qt5-websockets qt5-webchannel vulkan-headers cmake
+yay -S plasma6-wallpapers-wallpaper-engine-git
+```
+2.裝好後重啟Plasma shell服務
+```bash
+systemctl --user restart plasma-plasmashell.service
+```
+3.到 steam 下載 wallpaper engine
+4.回到KDE桌面，在桌面空白處右鍵點選「自訂桌面」，點選「取得新的外掛程式」，搜尋安裝「Wallpaper Engine KDE Plugin」
+5.將桌布類型調為Wallpaper Engine for KDE
+6.點選Library資料夾圖示，選取Steam收藏庫下的Steam目錄（不是Wallpaper Engine的目錄，也不是steamapps）。你可能得在檔案選擇器按右鍵，點"Show Hidden Folders"才能看到隱藏目錄。  Linux的路徑：~/.local/share/Steam
+
