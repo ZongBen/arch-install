@@ -522,8 +522,8 @@ flatpak install flathub com.usebottles.bottles
 cjkfonts、vcredist2012、d3dcompiler_46、iertutil
 ```
 
-##### OpenVpn
+##### Pacman Others
 
 ```bash
-sudo pacman -S openvpn networkmanager-openvpn
+sudo pacman -S openvpn networkmanager-openvpn ark unrar p7zip
 ```
