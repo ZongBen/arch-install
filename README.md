@@ -387,7 +387,7 @@ yay -S mkinitcpio-firmware
 
 ```bash
 sudo pacman -S os-prober
-vim /etc/default/grub #取消GRUB_DISABLE_OS_PROBER=false的註解
+sudo vim /etc/default/grub #取消GRUB_DISABLE_OS_PROBER=false的註解
 sudo os-prober
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
@@ -444,7 +444,7 @@ echo "set -ag terminal-overrides \",xterm-256color:RGB\"" >> ~/.config/tmux/tmux
 ##### Neovim
 
 ```bash
-sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit xclip
+sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit xclip nodejs
 git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
@@ -452,6 +452,7 @@ git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.co
 
 ```bash
 yay -S nvm twitch-dl yt-dlp
+echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.bashrc
 ```
 
 ##### Docker
@@ -474,8 +475,9 @@ sudo pacman -S dotnet-sdk dotnet-runtime aspnet-runtime
 ##### sddm numlock
 
 ```bash
-vim /etc/sddm.conf
-#在[General]底下加入
+sudo vim /etc/sddm.conf
+#加入以下文字
+[General]
 Numlock=on
 ```
 
