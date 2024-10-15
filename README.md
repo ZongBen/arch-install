@@ -336,6 +336,7 @@ flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/fl
 
 ```bash
 sudo pacman -S fcitx5-im fcitx5-chewing fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
+yay -S fcitx5-mcbopomofo-git #小麥輸入法
 ```
 
 2. 編輯`sudo vim /etc/environment`，加入以下內容
