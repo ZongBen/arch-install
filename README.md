@@ -452,7 +452,7 @@ git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.co
 ##### AUR others
 
 ```bash
-yay -S nvm twitch-dl yt-dlp
+yay -S nvm twitch-dl yt-dlp spotify
 echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.bashrc
 ```
 
