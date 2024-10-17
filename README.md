@@ -194,7 +194,7 @@ pacman -S linux-firmware
 ```bash
 pacman -S sudo networkmanager vim firefox noto-fonts-cjk noto-fonts-emoji
 pacman -S xorg xorg-server pipewire wireplumber pipewire-pulse intel-ucode nvtop
-pacman -S sddm plasma-meta ffmpegthumbs feh mpv alacritty dolphin //packagekit-qt6
+pacman -S sddm plasma-meta ffmpegthumbs feh mpv alacritty dolphin #packagekit-qt6
 pacman -S fcitx5-im fcitx5-chewing fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
 pacman -S git openssh fakeroot base-devel ntfs-3g
 ```
@@ -407,6 +407,7 @@ sudo pacman -S alacritty ttf-ubuntu-mono-nerd # 終端機、字型
 設定Alacritty字型
 
 ```bash
+mkdir ~/.config/alacritty
 vim ~/.config/alacritty/alacritty.toml
 
 # 加入以下內容
