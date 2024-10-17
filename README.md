@@ -501,7 +501,7 @@ sudo pacman -S steam
 若Steam下載速度緩慢
 
 ```bash
-sudo vim /home/username/.steam/steam/steam_dev.cfg
+sudo vim ~/.steam/steam/steam_dev.cfg
 
 # 加入以下內容
 @nClientDownloadEnableHTTP2PlatformLinux 0
