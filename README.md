@@ -449,6 +449,10 @@ echo "set -ag terminal-overrides \",xterm-256color:RGB\"" >> ~/.config/tmux/tmux
 ```bash
 sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit xclip nodejs
 git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+echo "notARepository: 'skip'" >> ~/.config/lazygit/config.yml
+git config --global core.editor "nvim"
+git config --global user.name "{name}"
+git config --global user.email "{email}"
 ```
 
 ##### AUR others
