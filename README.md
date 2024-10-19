@@ -429,6 +429,10 @@ size = 14
 
 [env]
 TERM = "xterm-256color"
+
+[window.padding]
+x = 5
+y = 5
 ```
 
 ##### Tmux
