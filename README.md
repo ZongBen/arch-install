@@ -172,7 +172,6 @@ pacman -S linux-headers nvidia-dkms nvidia-settings
 Nvidia顯示卡(驅動版本 > 545)的用戶建議編輯Nvdiia核心模組參數，啟用DRM框架，KDE Wayland才會有畫面。
 
 ```bash
-mkdir /etc/modprobe.d
 echo "options nvidia_drm modeset=1 fbdev=1" >>  /etc/modprobe.d/nvidia.conf
 ```
 
