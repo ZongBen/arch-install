@@ -1,4 +1,5 @@
 # ArchLinux + KDE 桌面環境安裝筆記
+全文參考Ivon的部落格: [文章連結](https://ivonblog.com/posts/install-archlinux/)
 
 ## 1. 製作開機隨身碟
 
@@ -24,6 +25,19 @@ ping -c 3 archlinux.org
 cat /sys/firmware/efi/fw_platform_size
 ```
 
+5. Arch Linux安裝媒體預設是從官方伺服器下載套件，有些地區的網速可能會很慢。為此可以先將Arch Linux的套件庫改成離您較近的鏡像站。
+
+```bash
+vim /etc/pacman.d/mirrorlist
+
+#在第一行將#取消註解，並在Server的後面改為臺灣國網中心的Arch鏡像站網址。這樣Arch就會優先使用此套件庫。
+Server = https://free.nchc.org.tw/arch/$repo/os/$arch
+
+#嘗試同步套件庫，能連線的話就不會輸出任何錯誤訊息。
+pacman -Syy
+```
+
+
 ### 2.2 分割磁碟
 
 1. 查看目前的硬碟分區
@@ -35,7 +49,7 @@ fdisk -l
 2. 選取要安裝系統的硬碟
 
 ```bash
-fdisk /dev/sda | /dev/nvme0n1
+fdisk /dev/sda 或者可能是 /dev/nvme0n1
 ```
 
 3. (可選擇) 輸入`g`刪除全部分區，建立GPT分割表。
@@ -253,15 +267,15 @@ passwd
 8. 建立新使用者username(可自選名稱)
 
 ```bash
-useradd -m -g users -G wheel,audio,video,storage -s /bin/bash username
-passwd username
+useradd -m -g users -G wheel,audio,video,storage -s /bin/bash {{username}}
+passwd {{username}}
 # 輸入密碼兩次
 ```
 
 9. (可選) vim /etc/sudoers 編輯sudoers檔案，使username(使用者名稱)可以使用sudo權限
 
 ```bash
-username ALL=(ALL) ALL
+{{username}} ALL=(ALL) ALL
 ```
 
 ### 2.8 安裝開機引導程式
@@ -448,7 +462,7 @@ echo "set -ag terminal-overrides \",xterm-256color:RGB\"" >> ~/.config/tmux/tmux
 
 ```bash
 sudo pacman -S gcc make git ripgrep fd unzip neovim lazygit xclip nodejs
-git clone https://github.com/ZongBen/LazyVimConfig "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/ZongBen/nvim-config "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 echo "notARepository: 'skip'" >> ~/.config/lazygit/config.yml
 git config --global core.editor "nvim"
 git config --global user.name "{name}"
