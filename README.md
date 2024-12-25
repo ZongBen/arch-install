@@ -545,7 +545,7 @@ cjkfonts、vcredist2012、d3dcompiler_46、iertutil
 ##### Pacman Others
 
 ```bash
-sudo pacman -S openvpn networkmanager-openvpn ark unrar p7zip discord
+sudo pacman -S openvpn networkmanager-openvpn ark unrar p7zip discord xwaylandvideobridge
 ```
 
 ##### WallPapper on KDE
