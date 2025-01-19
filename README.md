@@ -269,6 +269,8 @@ passwd
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash {{username}}
 passwd {{username}}
 # 輸入密碼兩次
+chown -R {{username}}:users /home/{{username}}
+chmod 700 /home/{{username}}
 ```
 
 9. (可選) vim /etc/sudoers 編輯sudoers檔案，使username(使用者名稱)可以使用sudo權限
