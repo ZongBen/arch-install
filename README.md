@@ -145,6 +145,7 @@ cat /mnt/etc/fstab
 
 ```bash
 arch-chroot /mnt
+pacman -Sy archlinux-keyring
 ```
 
 ### 2.4 安裝驅動程式
